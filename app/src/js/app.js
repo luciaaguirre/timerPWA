@@ -5,6 +5,6 @@ export class App extends LitElement {
   static properties = {}
 
   render () {
-    return html``
+    return html` <div id="timer"></div> `
   }
 }
