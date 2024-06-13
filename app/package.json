@@ -1,0 +1,14 @@
+{
+  "name": "timer-pwa",
+  "version": "1.0.0",
+  "description": "Timer PWA",
+  "author": "Lucia Aguirre",
+  "license": "ISC",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "lit": "^3.1.4"
+  }
+}
