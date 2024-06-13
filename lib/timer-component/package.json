@@ -15,11 +15,11 @@
     "start:live": "webpack serve --open --mode development --live-reload --hot"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/plugin-transform-runtime": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-transform-runtime": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
     "autoprefixer": "^10.1.0",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.3.0",
     "css-loader": "^6.11.0",
     "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
