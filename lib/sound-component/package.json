@@ -6,7 +6,10 @@
   "license": "ISC",
   "type": "module",
   "module": "src/index.js",
-  "main": "dist/main.bundle.js",
+  "main": "index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
@@ -21,17 +24,18 @@
     "autoprefixer": "^10.1.0",
     "babel-loader": "^8.3.0",
     "css-loader": "^6.11.0",
-    "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.3.2",
     "lit": "^3.0.2",
     "mini-css-extract-plugin": "^2.9.0",
-    "sass": "^1.77.2",
     "sass-loader": "^13.3.3",
     "style-loader": "^3.3.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.57.1",
     "webpack-cli": "^4.9.0",
     "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
   }
 }

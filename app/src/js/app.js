@@ -11,11 +11,6 @@ export class App extends LitElement {
       justify-content: center;
       align-items: center;
       color: var(--timer-component-part-color);
-      background-color: var(--text-color);
-      padding: 0.5rem;
-      box-shadow: 5px 5px 10px grey;
-      border-radius: 0.5rem;
-      margin: 0.5rem;
     }
   `
   static properties = {}
@@ -26,7 +21,7 @@ export class App extends LitElement {
         <header>
           <h1>Timer PWA</h1>
           <timer-player-component>
-            <timer-component> </timer-component>
+            <timer-component reverse="true" />
           </timer-player-component>
         </header>
       </div>

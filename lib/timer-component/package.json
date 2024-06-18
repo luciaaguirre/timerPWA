@@ -6,7 +6,10 @@
   "license": "ISC",
   "type": "module",
   "module": "src/index.js",
-  "main": "dist/main.bundle.js",
+  "main": "index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
