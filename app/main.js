@@ -1,5 +1,5 @@
 import { App } from './src/js/app.js'
-
-customElements.define('app-component', App)
+/* import {} from '../lib/sound-component/dist/main.bundle.js'
+ */ window.customElements.define('app-component', App)
 const app = document.getElementById('app')
-app.innerHTML = <app-component></app-component>
+app.innerHTML = '<app-component></app-component>'

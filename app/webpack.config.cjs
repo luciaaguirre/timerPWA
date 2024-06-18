@@ -1,8 +1,7 @@
-import CopyPlugin from 'copy-webpack-plugin'
-
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin') // Import the CopyPlugin
 
 module.exports = (_, argv) => ({
   entry: './main.js',
@@ -10,7 +9,6 @@ module.exports = (_, argv) => ({
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-
   module: {
     rules: [
       {
@@ -23,19 +21,17 @@ module.exports = (_, argv) => ({
       },
       {
         test: /\.(ts|tsx|js|mjs|jsx)$/,
-        exclude: /node-modules/,
+        exclude: /node_modules/, // corrected from 'node-modules'
         use: ['babel-loader']
       },
-
       {
         test: /\.css|s[ac]ss$/,
-        exclude: /node-modules/,
+        exclude: /node_modules/, // corrected from 'node-modules'
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
-
       {
         test: /\.(png|jp?g|gif|svg|eot|ttf|woff|woff2|mp3|wav|mp4|webm)$/i,
-        exclude: /node-modules/,
+        exclude: /node_modules/, // corrected from 'node-modules'
         type: 'asset/resource',
         generator: {
           filename: 'assets/[name][ext]'
@@ -43,13 +39,12 @@ module.exports = (_, argv) => ({
       },
       {
         test: /\.html$/,
-        exclude: /node-modules/,
-
+        exclude: /node_modules/, // corrected from 'node-modules'
         use: ['html-loader']
       },
       {
         test: /\.(json)$/,
-        exclude: /node_modules/,
+        exclude: /node_modules/, // corrected from 'node-modules'
         type: 'asset/resource',
         generator: {
           filename: './[name][ext]'
@@ -62,16 +57,14 @@ module.exports = (_, argv) => ({
       template: './src/index.html',
       scriptLoading: 'module'
     }),
-
     new MiniCssExtractPlugin({
       filename: '[name].css'
-    }),
-
-    new CopyPlugin({
+    })
+    /*  new CopyPlugin({
       patterns: [
         { from: './src/images/screenshots', to: 'assets' },
         { from: './sw.js', to: './' }
       ]
-    })
+    }) */
   ]
 })

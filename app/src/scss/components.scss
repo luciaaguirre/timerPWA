@@ -1,0 +1,15 @@
+:root {
+  background-color: purple;
+}
+
+.timer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+timer-player-component {
+  background-color: var(--text-color);
+  color: var(--neutral-color);
+  width: 22rem;
+  height: 10rem;
+}
