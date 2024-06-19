@@ -1,10 +1,10 @@
-@use 'utilities/variables' as *;
-@use 'utilities/functions' as *;
-@use './utilities/reset';
-@use 'sass:map';
+@use "utilities/variables" as *;
+@use "utilities/functions" as *;
+@use "./utilities/reset";
+@use "sass:map";
 
-@import 'variables.css';
-@import 'colors.css';
+@import "variables.scss";
+@import "colors.scss";
 
 html {
   font-size: font-properties("size-global");
@@ -13,7 +13,8 @@ html {
 }
 
 @for $i from 1 through 6 {
-  h#{$i}, .header#{$i} {
+  h#{$i},
+  .header#{$i} {
     font-size: elements-sizes("h#{$i}");
     padding: elements-paddings("h#{$i}");
     font-weight: elements-weights("h#{$i}");
@@ -76,38 +77,43 @@ a {
 }
 
 footer .sign {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
 
 %menu-color {
-    color: elements-colors("menu");
+  color: elements-colors("menu");
 }
 #main-menu {
-    position: sticky;
-    top: 0;
-    background-color: color-mix(in srgb, elements-colors("menu-bg") 95%, transparent);
-    @extend %menu-color;
+  position: sticky;
+  top: 0;
+  background-color: color-mix(
+    in srgb,
+    elements-colors("menu-bg") 95%,
+    transparent
+  );
+  @extend %menu-color;
 
-    h2 {
-      @extend %menu-color;
-    }
+  h2 {
+    @extend %menu-color;
+  }
 }
 
 // /* ESTILOS DE FUENTE */
 
 .font-handmade {
-    font-family: map.get($font-names, "handmade"), sans-serif;
+  font-family: map.get($font-names, "handmade"), sans-serif;
 }
 
 %contrast-color {
-    color: var(--neutral-dark-color);
+  color: var(--neutral-dark-color);
 }
 .font-contrast-color {
-    @extend %contrast-color;
+  @extend %contrast-color;
 
-    b, hr {
-        @extend %contrast-color;
-    }
+  b,
+  hr {
+    @extend %contrast-color;
+  }
 }
